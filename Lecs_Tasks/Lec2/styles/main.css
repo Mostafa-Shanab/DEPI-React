@@ -80,6 +80,25 @@ main a {
     text-decoration: none;
 }
 
+/* Start Download Button */
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #45a049;
+}
+
+/* End Download Button */
+
 /* End main */
 footer {
     text-align: center;
