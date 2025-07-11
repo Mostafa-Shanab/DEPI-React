@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji & Drag and Drop</title>
+    <style>
+        input {
+            padding: 8px;
+            width: 300px;
+        }
+
+        .board {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .column {
+            flex: 1;
+            border: 1px solid black;
+            border-radius: 8px;
+            min-height: 200px;
+            padding: 10px;
+        }
+
+        .column h3 {
+            text-align: center;
+        }
+
+        .task {
+            background: #e0f0ff;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: grab;
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        function dragStart(e) {
+            e.dataTransfer.setData('text', e.target.id);
+        }
+
+        function allowDrop(e) {
+            e.preventDefault();
+        }
+
+        function drop(e) {
+            // e.preventDefault();
+            const taskId = e.dataTransfer.getData('text');
+            const task = document.getElementById(taskId);
+            e.currentTarget.appendChild(task);
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Smiley Face SVG -->
+    <svg viewBox="0 0 100 100" width="100%" height="150">
+        <circle cx="50" cy="50" r="45" stroke="black" stroke-width="2" fill="yellow" />
+        <circle cx="35" cy="40" r="5" fill="black" />
+        <circle cx="65" cy="40" r="5" fill="black" />
+        <path d="M35 65 Q50 80, 65 65" stroke="black" stroke-width="3" fill="transparent" />
+    </svg>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+
+    <!-- Input for Numbers -->
+    <div style="text-align: center;">
+        <input type="text" id="numberInput" placeholder="Enter numbers separated by commas" />
+        <button>Create Tasks</button>
+    </div>
+
+    <!-- Drag and Drop -->
+    <div class="board">
+        <div class="column" id="todo" ondragover="allowDrop(event)" ondrop="drop(event)">
+            <h3>To Do</h3>
+            <div class="task" draggable="true" id="task-1" ondragstart="dragStart(event)">1</div>
+            <div class="task" draggable="true" id="task-2" ondragstart="dragStart(event)">2</div>
+        </div>
+        <div class="column" id="in-progress" ondragover="allowDrop(event)" ondrop="drop(event)">
+            <h3>In Progress</h3>
+            <div class="task" draggable="true" id="task-3" ondragstart="dragStart(event)">3</div>
+        </div>
+        <div class="column" id="done" ondragover="allowDrop(event)" ondrop="drop(event)">
+            <h3>Done</h3>
+            <div class="task" draggable="true" id="task-4" ondragstart="dragStart(event)">4</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
