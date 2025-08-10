@@ -17,7 +17,7 @@ body {
 
 /* Start Header */
 header {
-    background-color: var(--header-bg);
+    background: linear-gradient(to left, hsl(0, 0%, 49%), var(--accent-color));
     color: var(--header-text);
     padding: 2rem;
     font-size: 1rem;
@@ -27,6 +27,7 @@ header h1 {
     font-size: 2.5em;
     text-align: center;
     font-family: "robotic-exbold";
+    color: var(--text-color);
 }
 
 header nav {
@@ -52,12 +53,13 @@ nav ul {
     }
 
     nav ul li {
-        margin-bottom: 1.5em;
+        font-family: "robotic-exbold";
+        margin-block-end: 1.5em;
     }
 }
 
 nav ul li a {
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
     font-size: 1em;
@@ -65,7 +67,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: var(--accent-color);
+    color: white;
 }
 
 /* End Header */
@@ -81,32 +83,32 @@ nav ul li a:hover {
 /* End Global */
 
 /* Start main */
-#hero {
+#title {
     text-align: center;
     padding: 4rem 2rem;
     background-color: hsl(210, 100%, 95%);
     font-size: 1rem;
 }
 
-#hero h2 {
+#title h2 {
     font-size: 2.5em;
-    margin-bottom: 1em;
+    margin-block-end: 1em;
 }
 
 section {
     font-size: 1rem;
-    padding: 3rem 0;
+    margin-block: 3rem;
 }
 
 section h2 {
     font-size: 2em;
     border-bottom: 0.2em solid var(--accent-color);
-    padding-bottom: 0.5em;
-    margin-bottom: 1em;
+    padding-block-end: 0.5em;
+    margin-block-end: 1em;
 }
 
 ul li {
-    margin-bottom: 0.5em;
+    margin-block-end: 0.5em;
     font-size: 1em;
 }
 
@@ -138,8 +140,7 @@ main a {
 /* Start Form */
 form label {
     display: block;
-    padding-top: 1.25em;
-    padding-bottom: 0.5em;
+    padding-block: 1.25em 0.5em;
     font-weight: bold;
     font-size: 1em;
 }
@@ -154,7 +155,7 @@ form textarea {
 
 .radio-group,
 .checkbox-group {
-    margin-bottom: 1em;
+    margin-block-end: 1em;
     font-size: 1em;
 }
 
@@ -166,6 +167,12 @@ footer {
     background-color: var(--header-bg);
     color: white;
     padding: 1.5rem;
-    margin-top: 2rem;
-    font-size: 1em;
+    margin-block-start: 2rem;
+    font-size: 1.5em;
+}
+
+@media(max-width: 550px) {
+    footer {
+        font-size: 1em;
+    }
 }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <style>
+        .parent~p {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p>paragraph grandparent1</p>
+    <div class="parent">
+        <span>span1</span>
+        <span>span2</span>
+        <p>paragraph parent1</p>
+        <div class="child">
+            <p>paragraph child</p>
+        </div>
+        <p>paragraph parent2</p>
+        <span>span3</span>
+        <span>span4</span>
+        <span>span5</span>
+    </div>
+    <p>paragraph grandparent2</p>
+    linear-gradient(to right, red, blue);
+</body>
+
+</html>
