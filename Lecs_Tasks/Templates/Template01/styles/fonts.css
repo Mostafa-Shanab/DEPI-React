@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "Rubik-Bold";
+    src: url(../assets/fonts/rubic/Rubik-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url(../assets/fonts/gilroy/Gilroy-ExtraBold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url(../assets/fonts/gilroy/Gilroy-Regular.ttf);
+}
