@@ -150,10 +150,12 @@ header #intro div p:nth-child(3) {
 .service-list .service-item {
     width: 300px;
     padding: 2em;
+    border-radius: 15px;
 }
 
 .service-list .service-item * {
     color: #FFFFFF;
+    font-size: 1.2em;
 }
 
 .cover {
@@ -174,7 +176,7 @@ header #intro div p:nth-child(3) {
 }
 
 .wrapper img {
-    width: 10px;
+    width: 13px;
 }
 
 .wrapper {
